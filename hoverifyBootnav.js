@@ -117,19 +117,7 @@
         var check_options_data_attribute = function() {
             var data_hbn =  el.data('hbn-options');
             if(data_hbn){                
-                el_options = $.extend({
-                    duration_effect_on : 200,
-                    duration_effect_off : 500,
-                    easing_effect_on : null,
-                    easing_effect_off : null,
-                    effect_mouse_hover: 'classic',
-                    effect_mouse_out: 'classic',
-                    background_color : null,
-                    color : null,
-                    //functions
-                    my_effect_mouse_hover : null,
-                    my_effect_mouse_out : null
-                }, data_hbn);
+                el_options = $.extend(el_options, data_hbn);
             }
         };
 
