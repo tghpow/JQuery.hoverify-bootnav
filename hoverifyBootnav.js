@@ -115,57 +115,22 @@
          * Check if data attribute are use for overwrite
          */
         var check_options_data_attribute = function() {
-
-            // duration effect on
-            if( el.data('hbn-duration-effect-on') ){
-                el_options.duration_effect_on = el.data('hbn-duration-effect-on');
+            var data_hbn =  el.data('hbn-options');
+            if(data_hbn){                
+                el_options = $.extend({
+                    duration_effect_on : 200,
+                    duration_effect_off : 500,
+                    easing_effect_on : null,
+                    easing_effect_off : null,
+                    effect_mouse_hover: 'classic',
+                    effect_mouse_out: 'classic',
+                    background_color : null,
+                    color : null,
+                    //functions
+                    my_effect_mouse_hover : null,
+                    my_effect_mouse_out : null
+                }, data_hbn);
             }
-
-            // duration effect on
-            if( el.data('hbn-duration-effect-off') ){
-                el_options.duration_effect_off = el.data('hbn-duration-effect-off');
-            }
-
-            // easing effect on
-            if( el.data('hbn-easing-effect-on' )) {
-                el_options.easing_effect_on = el.data('hbn-easing-effect-on');
-            }
-
-            // easing effect off
-            if( el.data('hbn-easing-effect-off') ){
-                el_options.easing_effect_off = el.data('hbn-easing-effect-off');
-            }
-
-            // effect mouse hover
-            if( el.data('hbn-effect-mouse-hover') ){
-                el_options.effect_mouse_hover = el.data('hbn-effect-mouse-hover');
-            }
-
-            // effect mouse out
-            if( el.data('hbn-effect-mouse-out') ){
-                el_options.effect_mouse_out = el.data('hbn-effect-mouse-out');
-            }
-
-            // Text color
-            if( el.data('hbn-color') ){
-                el_options.color = el.data('hbn-color');
-            }
-
-            // background color
-            if( el.data('hbn-background-color') ){
-                el_options.background_color = el.data('hbn-background-color');
-            }
-
-            // customize effect mouse hover
-            if( el.data('hbn-my-effect-mouse-hover') ){
-                el_options.my_effect_mouse_hover = el.data('hbn-my-effect-mouse-hover');
-            }
-
-            // customize effect mouse hover
-            if( el.data('hbn-my-effect-mouse-out') ){
-                el_options.my_effect_mouse_out = el.data('hbn-my-effect-mouse-out');
-            }
-
         };
 
         /**
