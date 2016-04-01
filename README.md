@@ -13,7 +13,7 @@ Use this simple bootstrap addon to add a nice effect on nav's hover.
 <script type="text/javascript" src="../hoverifyBootnav.js"></script>
 ```
 
-If you want to use easing, dont forget to add it [like this one !] <https://jqueryui.com/easing "link to JQuery using"/> 
+If you want to use easing, dont forget to add it like this one: <https://jqueryui.com/easing/> 
 
 ### Step 2: Create html (bootstrap nav)
 
