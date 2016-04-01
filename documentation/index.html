@@ -1,0 +1,179 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
+		<link rel="stylesheet" href="./asset/css/jquery.highlight.css">
+
+
+		<style type="text/css">
+			.separator { margin-bottom: 20px;} 
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			 <div class="row">
+		         <ul style="margin-bottom: 15px;" class="nav nav-pills col-xs-12" data-hbn-background-color="black" data-hbn-color="white">
+		            <li role="presentation" class="active"><a style="color: white;" href="./">Home</a></li>
+		            <li role="presentation"><a href="/demo">Demo</a></li>
+		            <li role="presentation"><a href="/documentation">Documentation</a></li>
+		        </ul>
+		    </div>
+			<div class="row">
+				<div class="col-xs-12 label label-primary">
+					<h1 style="margin: 10px 0;">Hoverify Bootnav 1.0.0</h1>
+					<span style="font-size: medium">Improve your nav's design (Jquery plugin)</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 alert alert-info">
+					<h3 style="margin: 5px 0;text-align: center;">Documentation</h3>					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+				<h3>How to install</h3>
+				<h4>Step 1: link required files</h4>
+<pre class="code" lang="html">
+<!-- CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
+<link rel="stylesheet" href="../hoverifyBootnav.css">
+<!-- JS -->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../hoverifyBootnav.js"></script>
+</pre>
+					<p>If you want to use easing, dont forget to add it <a href="https://jqueryui.com/easing/" target="_blank">like this one !</a> </p>
+				<h4>Step 2: Create html (bootstrap nav)</h4>
+<pre class="code" lang="html">
+<ul class="nav nav-tabs nav-stacked">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+  <li role="presentation" ><a href="#">Commands & account</a></li>
+</ul>
+</pre>
+					<p class="alert alert-danger">If you don't have a li.active, hbn will not work.</p>
+			<h4>Step 3: Call Hoverify Bootnav</h4>	
+			<h5>Using JS</h5>
+<pre class="code" lang="js">
+$(document).ready(function(){
+	$('ul.nav').hoverifyBootnav();
+});	
+</pre>	
+			<h5>Using data attribute (HTML)</h5>
+			<p>Add data-hbn to call Hoverify Bootnav</p>	
+<pre class="code" lang="html">
+<ul class="nav nav-tabs nav-stacked" data-hbn>
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+  <li role="presentation" ><a href="#">Commands & account</a></li>
+</ul>
+</pre>									
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+				<h2>Options</h2>
+<pre class="code" lang="js">
+duration_effect_on    , 	//400
+duration_effect_off   , 	//1000
+easing_effect_on      , 	//null
+easing_effect_off     , 	//null
+effect_mouse_hover    ,     //classic or teleportation
+effect_mouse_out      ,     //classic or teleportation
+background_color      , 	//null
+color                 , 	//null
+//Function
+my_effect_mouse_hover ,     //null
+my_effect_mouse_out   ,     //null
+</pre>	
+				<h5>Using options with data attribute (HTML)</h5>
+<pre class="code" lang="html">
+<ul class="nav nav-tabs nav-stacked" 
+	data-hbn="true"
+	data-hbn-background-color="#5cb85c"
+	data-hbn-duration-effect-on="2000"
+	data-hbn-duration-effect-off="750"
+	data-hbn-easing-effect-on="easeOutElastic"
+	data-hbn-easing-effect-off="easeOutBack"
+	data-hbn-effect-mouse-out="teleportation">
+  <li role="presentation" class="active"><a href="#">..</a></li>
+  <li role="presentation"><a href="#">..</a></li>
+</ul>
+</pre>	
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<h2>Customize effects</h2>
+					<p>You can set your own function on mouse hover & mouse out</p>
+<pre class="code" lang="js">
+$('ul.nav.do-hbn').hoverifyBootnav({
+	'duration_effect_on' : 400,
+	'duration_effect_off' : 1000,
+	'my_effect_mouse_hover': function(){ //do what you want },
+	'my_effect_mouse_out': function(){ //do what you want }
+});
+</pre>
+
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-xs-12">
+				<h2>And more</h2>
+				<p>If you call Hoverify Bootnav on many nav like this</p>
+<pre class="code" lang="js">
+$('ul.nav.do-hbn').hoverifyBootnav({
+	'duration_effect_on' : 400,
+	'duration_effect_off' : 1000,
+	'easing_effect_on' : 'easeOutElastic',
+	'easing_effect_off' : 'easeOutBack',
+	'background_color' : 'black',
+	'color' : 'red'
+});
+</pre>
+				<p>And if you want to overwrite an option for one particular nav, use data attribute!<br>
+				Like this (overwrite background-color): </p>
+<pre class="code" lang="html">
+<ul class="nav nav-tabs nav-stacked" data-hbn-background-color="green">	
+  <li role="presentation" class="active"><a href="#">..</a></li>
+  <li role="presentation"><a href="#">..</a></li>
+</ul>
+</pre>	
+				</div>
+			</div>
+
+
+		<div class="row">
+			<div class="col-xs-12">
+				<h2>Change design</h2>
+				<p>You want to set your own style? Use the selector .hoverboot-pill, like this</p>
+<pre class="code" lang="css">
+.hoverboot-pill{
+	background-color: none;
+	border-bottom: 2px solid #337ab7;
+}
+</pre>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="./asset/js/jquery.highlight.js"></script>
+
+	<script type="text/javascript">
+		(function($){
+			$('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol'});		
+		})(jQuery);
+	</script>
+	</body>
+</html>	
