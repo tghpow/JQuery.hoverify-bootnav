@@ -272,14 +272,8 @@
      */
     var run_hbn_with_data_attribute = function() {
         $('*[data-hbn]').each(function () {
-            var options = {
-                'duration_effect_on': $(this).data('hbn-duration-effect-on'),
-                'duration_effect_off': $(this).data('hbn-duration-effect-off'),
-                'easing_effect_on': $(this).data('hbn-easing-effect-on'),
-                'easing_effect_off': $(this).data('hbn-easing-effect-off'),
-                'background_color': $(this).data('hbn-background-color'),
-                'color': $(this).data('hbn-color')
-            };
+            console.debug($(this));
+            var options =  $(this).data('hbn-options');            
             $(this).hoverifyBootnav(options);
         });
     };
