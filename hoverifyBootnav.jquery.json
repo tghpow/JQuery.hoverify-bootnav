@@ -1,0 +1,31 @@
+{
+  "name": "hoverifyBootnav",
+  "title": "jQuery hoverifyBootnav",
+  "description": "Improve bootstrap nav's design - animated menu on nav's hover",
+  "keywords": [
+    "jquery-plugins",
+    "hoverifyBootnav",
+    "bootstrap",
+    "menu hover",
+    "animated menu"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Thibault CHAZOTTES",
+    "url": "https://github.com/tghpow"
+  },
+ 
+  "licenses": [
+    {
+      "type": "WTFPL",
+      "url": "http://www.wtfpl.net"
+    }
+  ],
+  "bugs": "https://github.com//tghpow/JQuery.hoverify-bootnav/issues",
+  "homepage": "http://hoverify-bootnav.thibault-chazottes.fr",
+  "docs": "https://github.com/tghpow/JQuery.hoverify-bootnav#readme",
+  "download": "https://github.com/tghpow/JQuery.hoverify-bootnav/archive/master.zip",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}

@@ -272,7 +272,7 @@
      */
     var run_hbn_with_data_attribute = function() {
         $('*[data-hbn]').each(function () {
-            console.debug($(this));
+            
             var options =  $(this).data('hbn-options');            
             $(this).hoverifyBootnav(options);
         });
