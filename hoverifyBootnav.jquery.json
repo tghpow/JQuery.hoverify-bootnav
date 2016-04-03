@@ -6,8 +6,10 @@
     "jquery-plugins",
     "hoverifyBootnav",
     "bootstrap",
-    "menu hover",
-    "animated menu"
+    "menu",
+    "hover",
+    "animated",
+    "menu"
   ],
   "version": "1.0.0",
   "author": {
