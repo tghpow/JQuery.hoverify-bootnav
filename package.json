@@ -26,8 +26,7 @@
   ],
   "bugs": "https://github.com//tghpow/JQuery.hoverify-bootnav/issues",
   "homepage": "http://hoverify-bootnav.thibault-chazottes.fr",
-  "docs": "https://github.com/tghpow/JQuery.hoverify-bootnav#readme",
-  "download": "https://github.com/tghpow/JQuery.hoverify-bootnav/archive/master.zip",
+  "repository": "https://github.com/tghpow/JQuery.hoverify-bootnav#readme",
   "dependencies": {
     "jquery": ">=1.4"
   }
